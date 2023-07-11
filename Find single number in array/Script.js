@@ -2,9 +2,7 @@ function singleNumber(nums) {
    
     let numbers = nums.sort();
     let results = 0;
-    
-
-     for (const [index, number] of numbers.entries()){
+    for (const [index, number] of numbers.entries()){
         if (
             number !== numbers[index + 1] && numbers[index + 1] !== numbers[index + 2]
             
@@ -12,14 +10,8 @@ function singleNumber(nums) {
         ) {
             results = numbers[index +1];
             return results
-            
-        }
-        
-         
-        
-        }
-        
-
+         }
+      }
 }
 
 
@@ -37,7 +29,6 @@ function singleNumber(nums) {
 //     }
     
 // }
-
 
 var lastNumber = singleNumber([2,2,2,2,6,6,3,3,3,4,4,4,4,7,5,5,1,1,1,1,1,1,9,9,9])
 console.log(lastNumber)
